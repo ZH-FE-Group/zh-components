@@ -16,10 +16,8 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
-module.exports = {
+export default {
   version: '0.0.1',
   install,
   Button // 单独暴露 Button 组件，方便单独引入
 }
-
-module.exports.default = module.exports

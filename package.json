@@ -1,49 +1,50 @@
 {
-  "name": "zh-components",
-  "version": "0.1.1",
-  "private": false,
-  "license": "MIT",
-  "main": "dist/zh-components.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ZH-FE-Group/zh-components.git"
-  },
-  "files": [
-    "dist",
-    "src"
-  ],
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "vue": "^2.5.17"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.1.0",
-    "@vue/cli-plugin-eslint": "^3.1.0",
-    "@vue/cli-service": "^3.1.0",
-    "@vue/eslint-config-standard": "^4.0.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0-0",
-    "lint-staged": "^7.2.2",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.5.17"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.js": [
-      "vue-cli-service lint",
-      "git add"
+    "name": "zh-components",
+    "version": "0.1.6",
+    "private": false,
+    "license": "MIT",
+    "main": "dist/ZhComponents.common.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ZH-FE-Group/zh-components.git"
+    },
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "build-bundle": "vue-cli-service build --target lib --name ZhComponents ./src/src/index.js",
+        "lint": "vue-cli-service lint"
+    },
+    "dependencies": {
+        "vue": "^2.5.17"
+    },
+    "file": [
+        "dist",
+        "src"
     ],
-    "*.vue": [
-      "vue-cli-service lint",
-      "git add"
-    ]
-  }
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^3.1.0",
+        "@vue/cli-plugin-eslint": "^3.1.0",
+        "@vue/cli-service": "^3.1.0",
+        "@vue/eslint-config-standard": "^4.0.0",
+        "babel-eslint": "^10.0.1",
+        "eslint": "^5.8.0",
+        "eslint-plugin-vue": "^5.0.0-0",
+        "lint-staged": "^7.2.2",
+        "node-sass": "^4.9.0",
+        "sass-loader": "^7.0.1",
+        "vue-template-compiler": "^2.5.17"
+    },
+    "gitHooks": {
+        "pre-commit": "lint-staged"
+    },
+    "lint-staged": {
+        "*.js": [
+            "vue-cli-service lint",
+            "git add"
+        ],
+        "*.vue": [
+            "vue-cli-service lint",
+            "git add"
+        ]
+    }
 }
